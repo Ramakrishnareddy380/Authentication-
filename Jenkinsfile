@@ -35,7 +35,7 @@ pipeline {
                     }
                 }
             }
-        stage('Build') {
+        stage('Deploy') {
             steps {
                 script {
                     def buildScriptExists = sh(script: "npm run | grep build", returnStatus: true) == 0
