@@ -35,6 +35,14 @@ pipeline {
                     }
                 }
             }
+        stage('Run Docker Container on Port 3000') {
+    steps {
+        script {
+            sh '/usr/local/bin/docker run -d -p 3000:3000 app'
+        }
+    }
+}
+
         stage('Deploy') {
             steps {
                 script {
